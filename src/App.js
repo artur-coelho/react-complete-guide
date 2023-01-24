@@ -8,7 +8,6 @@ function App() {
 
   const addUser = (user) => {
     setUsers((prevState) => [user, ...prevState]);
-    console.log(users);
   };
 
   return (
