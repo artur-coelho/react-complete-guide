@@ -1,17 +1,14 @@
 import React from 'react';
 
-import styles from './Button.module.css';
+import classes from './Button.module.css';
 
 const Button = (props) => {
-  return props.link ? (
-    <a href={props.link} className={styles.button}>
-      {props.children}
-    </a>
-  ) : (
+  return (
     <button
       type={props.type || 'button'}
-      className={styles.button}
+      className={`${classes.button} ${props.className}`}
       onClick={props.onClick}
+      disabled={props.disabled}
     >
       {props.children}
     </button>
